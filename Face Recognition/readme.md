@@ -22,7 +22,7 @@ First, I preprocessed the images to remove potential noise. Then, I created a da
 
 - Three tested images, all of which were correctly predicted.
 
-!["output"]()
+!["output"](https://github.com/Moein-Moatali-2006/DeepLearning/blob/main/Face%20Recognition/output.png)
 
 ## Run and test :
 
