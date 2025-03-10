@@ -17,8 +17,8 @@ First, I preprocessed the images to remove potential noise. Then, I created a da
 
 |Data|Accuracy|Loss|
 |----|--------|----|
-|Train :|0.9955|0.0219|
-|Validation :|0.8780|1.1940|
+|Train :|0.9010|0.3660|
+|Validation :|0.8750|0.5269|
 
 - Three tested images, all of which were correctly predicted.
 
