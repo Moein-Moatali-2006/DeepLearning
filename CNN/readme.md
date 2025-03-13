@@ -17,7 +17,7 @@ The results were presented in a table for comparison.
 
 ### Results:
 
-| Dataset        | MLP (Deep Learning) | CNN + MLP (Deep Learning) |
+| Dataset        | MLP (Machine Learning) | CNN + MLP (Deep Learning) |
 |---------------|----------------------|-------------------------|
 | MNIST        | 97%                  | 98%                     |
 | Fashion MNIST | 86%                  | 86%                     |
