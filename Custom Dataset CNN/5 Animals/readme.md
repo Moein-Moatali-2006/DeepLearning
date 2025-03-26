@@ -7,5 +7,5 @@ In this project, a model has been created using the CNN algorithm to identify th
 |validation|62%|1.1029|
 
 
-![](images\confusian_mx.png)
-![](images\CNN.jpg)
+![](https://github.com/Moein-Moatali-2006/DeepLearning/blob/main/Custom%20Dataset%20CNN/5%20Animals/images/confusian_mx.png)
+![](https://github.com/Moein-Moatali-2006/DeepLearning/blob/main/Custom%20Dataset%20CNN/5%20Animals/images/CNN.jpg)
