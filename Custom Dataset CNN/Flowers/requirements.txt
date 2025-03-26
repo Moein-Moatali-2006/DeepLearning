@@ -1,0 +1,6 @@
+numpy
+telebot
+tensorflow
+keras
+matplotlib
+skleran

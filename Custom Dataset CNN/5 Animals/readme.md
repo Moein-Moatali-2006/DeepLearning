@@ -7,6 +7,5 @@ In this project, a model has been created using the CNN algorithm to identify th
 |validation|62%|1.1029|
 
 
-![]()
-![]()
-![]()
+![](images\confusian_mx.png)
+![](images\CNN.jpg)
