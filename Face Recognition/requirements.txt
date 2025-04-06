@@ -1,0 +1,7 @@
+TensorFlow 
+Scikit-Learn
+DeepFace
+Numpy
+Pandas 
+Matplotlib.pyplot 
+OpenCV
