@@ -7,5 +7,5 @@ This project uses YOLOv8 for detecting Persian license plates in images. It util
 - OpenCV
 - YOLOv8
 
-!["image test"]()
-!["image test"]()
+!["image test"](https://github.com/Moein-Moatali-2006/DeepLearning/blob/main/YOLO/test1.png)
+!["image test"](https://github.com/Moein-Moatali-2006/DeepLearning/blob/main/YOLO/test2.png)
