@@ -1,6 +1,6 @@
 
 # Model test outputs
-|image_path|predicted_labels|confidence score|
+|image|predicted_labels|confidence score|
 |----------|----------------|----------------|
 |![1](https://github.com/Moein-Moatali-2006/DeepLearning/blob/main/OCR/Deep%20Text%20Recognition%20Benchmark/my_test/1.jpg)|71q91712|0.9774|
 |![2](https://github.com/Moein-Moatali-2006/DeepLearning/blob/main/OCR/Deep%20Text%20Recognition%20Benchmark/my_test/2.jpg)|56q86626|0.9943|
