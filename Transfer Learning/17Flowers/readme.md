@@ -11,6 +11,6 @@ The model is used within a Telegram bot.
 |Transfer Learning CNN |91%|0.27|
 
 
-!["image](https://github.com/Moein-Moatali-2006/DeepLearning/blob/main/Transfer%20Learning/17Flowers/con.png)
-!["image](https://github.com/Moein-Moatali-2006/DeepLearning/blob/main/Transfer%20Learning/17Flowers/acc.png)
-!["image](https://github.com/Moein-Moatali-2006/DeepLearning/blob/main/Transfer%20Learning/17Flowers/loss.png)
+!["image](https://github.com/Moein-Moatali-2006/DeepLearning/blob/main/Transfer%20Learning/17Flowers/Acc_ch.png)
+!["image](https://github.com/Moein-Moatali-2006/DeepLearning/blob/main/Transfer%20Learning/17Flowers/loss_ch.png)
+!["image](https://github.com/Moein-Moatali-2006/DeepLearning/blob/main/Transfer%20Learning/17Flowers/conMX.png)
