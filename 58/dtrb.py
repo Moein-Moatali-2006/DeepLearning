@@ -5,6 +5,7 @@ import torch
 import torch.backends.cudnn as cudnn
 import torch.utils.data
 import torch.nn.functional as F
+import torchvision.transforms as transforms
 
 from deep_text_recognition_benchmark.utils import CTCLabelConverter, AttnLabelConverter
 from deep_text_recognition_benchmark.dataset import RawDataset, AlignCollate
@@ -25,10 +26,10 @@ parser.add_argument('--character', type=str, default='0123456789abcdefghijklmnop
 parser.add_argument('--sensitive', action='store_true', help='for sensitive character mode')
 parser.add_argument('--PAD', action='store_true', help='whether to keep ratio then pad for image resize')
 """ Model Architecture """
-parser.add_argument('--Transformation', type=str, required=True, help='Transformation stage. None|TPS')
-parser.add_argument('--FeatureExtraction', type=str, required=True, help='FeatureExtraction stage. VGG|RCNN|ResNet')
-parser.add_argument('--SequenceModeling', type=str, required=True, help='SequenceModeling stage. None|BiLSTM')
-parser.add_argument('--Prediction', type=str, required=True, help='Prediction stage. CTC|Attn')
+parser.add_argument('--Transformation',default="TPS", type=str, required=True, help='Transformation stage. None|TPS')
+parser.add_argument('--FeatureExtraction',default="ResNet", type=str, required=True, help='FeatureExtraction stage. VGG|RCNN|ResNet')
+parser.add_argument('--SequenceModeling',default="BiLSTM", type=str, required=True, help='SequenceModeling stage. None|BiLSTM')
+parser.add_argument('--Prediction',default="Attn", type=str, required=True, help='Prediction stage. CTC|Attn')
 parser.add_argument('--num_fiducial', type=int, default=20, help='number of fiducial points of TPS-STN')
 parser.add_argument('--input_channel', type=int, default=1, help='the number of input channel of Feature extractor')
 parser.add_argument('--output_channel', type=int, default=512,
@@ -85,13 +86,26 @@ class DTRB:
                 collate_fn=AlignCollate_demo, pin_memory=True)
             
     def predict(self,image):
+        AlignCollate_demo = AlignCollate(imgH=opt.imgH, imgW=opt.imgW, keep_ratio_with_pad=opt.PAD)
+
+        transform = transforms.Compose([
+        transforms.ToTensor(),])
+        #transforms.Normalize(0.5, 0.5) ])
+
         # self.load_data(image_folder)
         # predict
         self.model.eval()
         with torch.no_grad():
-            image_tensor = torch.from_numpy(image).type(torch.FloatTensor)
+            image_tensor = transform(image) 
+            image_tensor = image_tensor.sub_(0.5).div_(0.5)
+            print(image_tensor.shape)
+            image_tensor = torch.unsqueeze(image_tensor,0)
+            image_tensor = torch.permute(image_tensor, (0,1,3,2)).size()
+            
+            image_tensor = AlignCollate_demo(image_tensor)
+
+            
             # for image_tensors, image_path_list in self.demo_loader:
-            image_tensor = torch.unsqueeze(image_tensor,0) ##################################################
             batch_size = image_tensor.size(0)
             image = image_tensor.to(self.device)
             # For max length prediction
@@ -124,7 +138,7 @@ class DTRB:
 
             preds_prob = F.softmax(preds, dim=2)
             preds_max_prob, _ = preds_prob.max(dim=2)
-            for img_name, pred, pred_max_prob in zip(image_path_list, preds_str, preds_max_prob):
+            for img_name, pred, pred_max_prob in zip(["besco"], preds_str, preds_max_prob):
                 if 'Attn' in opt.Prediction:
                     pred_EOS = pred.find('[s]')
                     pred = pred[:pred_EOS]  # prune after "end of sentence" token ([s])
