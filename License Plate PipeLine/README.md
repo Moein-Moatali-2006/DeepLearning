@@ -4,8 +4,8 @@
 ```
 pip install -r requirements.txt
 ```
-!["image"]()
-!["image"]()
+!["image"](https://github.com/Moein-Moatali-2006/DeepLearning/blob/main/License%20Plate%20PipeLine/io/input/image_test.jpg)
+!["image"](https://github.com/Moein-Moatali-2006/DeepLearning/blob/main/License%20Plate%20PipeLine/io/output/plate_image_result_0.jpg)
 
 ## predict your plates
 Please first download the trained weights from the link below and place them in the weights folder.
@@ -20,7 +20,7 @@ Arguments you can modify:
 --threshold 0-1
 ```
 
-!["image"]()
+!["image"](https://github.com/Moein-Moatali-2006/DeepLearning/blob/main/License%20Plate%20PipeLine/io/output/example.png)
 
 ## Verification Plate
 We have a database containing a collection of license plates.
@@ -30,4 +30,4 @@ First, add your own plates to the database, then use the system.
 python verification.py
 ```
 
-!["image"]()
+!["image"](https://github.com/Moein-Moatali-2006/DeepLearning/blob/main/License%20Plate%20PipeLine/io/output/example_1.png)
