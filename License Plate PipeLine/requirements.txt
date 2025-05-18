@@ -1,0 +1,8 @@
+string
+argparse
+torch
+torchvision
+cv2
+ultralytics
+sqlite3
+numpy
