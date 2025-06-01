@@ -42,4 +42,4 @@ Set Models : \
 voice_model.h5 ---> bot.ipynb
 singers_model.h5 ---> bot_singers.ipynb
 
-![image]()
+![image](https://github.com/Moein-Moatali-2006/DeepLearning/blob/main/Audio%20Classification/output_bot.jpg)
