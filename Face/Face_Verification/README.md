@@ -1,18 +1,38 @@
-# Face Verification
+# 🧠 Face Verification
 
-1- Install Libraries :
-```
+A simple Python project to compare two face images and determine whether they belong to the **same person** or **different individuals**, using [InsightFace](https://github.com/deepinsight/insightface).
+
+---
+
+## ⚙️ Installation
+
+Install required libraries:
+
+```bash
 pip install -r requirements.txt
+
 ```
-2- Set two images path :
-```
-image_1 = cv2.imread("Your path")
-image_2 = cv2.imread("Your path")
+## 📸 Usage
+
+1. Load Your Images:
+```python
+image_1 = cv2.imread("path/to/image1.jpg")
+image_2 = cv2.imread("path/to/image2.jpg")
 ```
 
-3- Compare and show result: Same Person or Different Persons.
+2. Set the Threshold:
+```python
+threshold = 22  # Lower = stricter, Higher = more lenient
+```
 
-You can change threshold value:
+3. Run Verification:
+
+```text
+✅ Same Person
+❌ Different Persons
 ```
-threshold = 22
-```
+
+## 🧪 How It Works:
+* Extract face embeddings from both images
+* Compute the Euclidean distance between the two embeddings
+* Compare the distance to the threshold
