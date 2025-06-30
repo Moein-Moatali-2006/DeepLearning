@@ -22,8 +22,8 @@ app.prepare(ctx_id=0, det_size=(640, 640))
 ## face_identification.ipynb
 input:
 
-!["input"]()
+!["input"](https://github.com/Moein-Moatali-2006/DeepLearning/blob/main/Face/Face_Identification/input.jpg)
 
 output:
 
-!["output"]()
+!["output"](https://github.com/Moein-Moatali-2006/DeepLearning/blob/main/Face/Face_Identification/output.jpg)
