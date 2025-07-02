@@ -1,7 +1,7 @@
 # Emoji_Text_Classification
 
 ## Labels:
-!["labels"]()
+!["labels"](https://github.com/Moein-Moatali-2006/DeepLearning/blob/main/Text_Classification/labels.png)
 
 ## result with different dimensions(50d,100d,200d,300d)
 
