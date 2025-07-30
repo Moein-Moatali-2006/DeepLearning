@@ -12,4 +12,3 @@ The model is used within a Telegram bot.
 |Validation|0.8667|2.6953|
 
 
-!["image]()
